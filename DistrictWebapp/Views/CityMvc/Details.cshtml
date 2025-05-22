@@ -1,0 +1,59 @@
+﻿@model DistrictWebapp.Models.City
+
+@{
+    ViewData["Title"] = "Şehir Detayı";
+}
+
+<div class="container mt-4">
+    <div class="card shadow rounded">
+        <div class="card-header bg-primary text-white">
+            <h3>@Model.Name (@Model.PlateCode)</h3>
+        </div>
+        <div class="card-body">
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <p><strong>Bölge:</strong> @Model.Region</p>
+                    <p><strong>Alan Kodu:</strong> @Model.AreaCode</p>
+                    <p><strong>Yüzölçümü:</strong> @Model.AreaSize km²</p>
+                    <p><strong>Toplam Nüfus:</strong> @Model.Population</p>
+                    <p><strong>Nüfus Artışı:</strong> @Model.PopulationGrowth</p>
+                </div>
+                <div class="col-md-6">
+                    <p><strong>Erkek Nüfus:</strong> @Model.MalePopulation <span class="text-muted">(%@Model.MaleRatio)</span></p>
+                    <p><strong>Kadın Nüfus:</strong> @Model.FemalePopulation <span class="text-muted">(%@Model.FemaleRatio)</span></p>
+                    <p><strong>Türkiye Genelindeki Payı:</strong> @Model.PopulationRateNational</p>
+                </div>
+            </div>
+
+            <hr />
+
+            <h4>İlçeler</h4>
+            <table class="table table-bordered table-striped table-hover mt-3">
+                <thead class="table-light">
+                    <tr>
+                        <th>#</th>
+                        <th>İlçe</th>
+                        <th>Nüfus</th>
+                        <th>Erkek</th>
+                        <th>Kadın</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.Districts.Count; i++)
+                    {
+                        <tr>
+                            <td>@(i + 1)</td>
+                            <td>@Model.Districts.ElementAt(i).Name</td>
+                            <td>@Model.Districts.ElementAt(i).Population</td>
+                            <td>@Model.Districts.ElementAt(i).MalePopulation</td>
+                            <td>@Model.Districts.ElementAt(i).FemalePopulation</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <a class="btn btn-secondary mt-3" href="/CityMvc">← Geri</a>
+        </div>
+    </div>
+</div>
+

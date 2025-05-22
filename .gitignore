@@ -1,0 +1,57 @@
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Visual Studio working folder
+.vs/
+
+# ASP.NET Core
+wwwroot/dist/
+wwwroot/node_modules/
+node_modules/
+dist/
+npm-debug.log
+yarn-error.log
+
+# DotCover
+*.dotCover
+
+# Logs
+*.log
+
+# Database
+*.mdf
+*.ldf
+
+# VS Code local history
+.history/
+
+# JetBrains Rider
+.idea/
+
+# File-based secrets
+secrets.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# VS Indexer
+*.vsidx
