@@ -54,10 +54,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-// 💥 BU SATIRI EKLE → API Controller'ları aktif eder
 app.MapControllers();
 
-// Mevcut MVC controller route'u
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=CityMvc}/{action=Index}/{id?}");
