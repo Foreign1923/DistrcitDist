@@ -32,13 +32,15 @@ namespace DistrictWebapp.Controllers
             var city = await _cityService.GetCityByIdAsync(id);
             if (city == null)
                 return NotFound();
+
             return View(city);
         }
+
         //public IActionResult Create()
         //{
         //    return View();
         //}
-       
+
 
     }
 }

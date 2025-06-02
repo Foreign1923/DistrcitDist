@@ -37,6 +37,7 @@ builder.Services.AddScoped<SeederService>();
 //}
 // ------------------> bura seederservice 'i otomatik çalıştırır tek seferde
 
+//buraya ayrı bir klasör açıp taşımak en mantıklısı
 
 var app = builder.Build();
 

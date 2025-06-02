@@ -51,33 +51,7 @@ namespace DistrictWebapp.Repositories
             await _context.SaveChangesAsync();
 
         }
-        //public async Task<City> GetCityByIdAsync(int id)
-        //{
-        //    return await _context.Cities.FindAsync(id);
-        //}
-        //public async Task<IEnumerable<City>> GetAllCitiesAsync()
-        //{
-        //    return await _context.Cities.ToListAsync();
-        //}
-        //public async Task AddCityAsync(City city)
-        //{
-        //    await _context.Cities.AddAsync(city);
-        //    await _context.SaveChangesAsync();
-        //}
-        //public async Task UpdateCityAsync(City city)
-        //{
-        //    _context.Cities.Update(city);
-        //    await _context.SaveChangesAsync();
-        //}
-        //public async Task DeleteCityAsync(int id)
-        //{
-        //    var city = await GetCityByIdAsync(id);
-        //    if (city != null)
-        //    {
-        //        _context.Cities.Remove(city);
-        //        await _context.SaveChangesAsync();
-        //    }
-        //}
+        
     }
     
 }
